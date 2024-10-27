@@ -16,7 +16,7 @@ const config: Config = {
       },
       fontFamily: {
         amsterdam: ['var(--font-amsterdam-two)'],
-        capt: ['var(--font-glacial)'],
+        capt: ['var(--font-cap-carnaval)'],
         glacial: ['var(--font-glacial)']
       }
     },
