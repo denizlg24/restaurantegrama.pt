@@ -66,7 +66,8 @@ const Header = () => {
         className="lg:flex flex-col gap-1 justify-center items-end text-xl hidden"
       >
         <Link
-          href="#"
+          href="https://widget.thefork.com/7b428609-237e-4a67-ab1b-63da08e84119"
+          target="_blank"
           className="hover:text-white/80 transition-colors text-white"
         >
           Book Now
@@ -113,16 +114,17 @@ const Header = () => {
               </Link>
               <Divider className="w-full h-[1px] bg-primary" />
               <div className="sm:flex-row sm:gap-0 gap-3 flex flex-col w-full justify-between items-center">
-                <div className="flex flex-col sm:items-start justify-center gap-1">
+                <div className="flex sm:text-base text-sm sm:flex-col flex-row sm:items-start justify-center gap-1">
                   <p className="font-glacial text-primary">
                     Rua João das Regras, 45
                   </p>
                   <p className="font-glacial text-primary">Piso -2, Porto</p>
                 </div>
                 <Divider className="w-full h-[1px] bg-primary sm:hidden" />
-                <div className="flex flex-col sm:items-end justify-center gap-1">
+                <div className="flex flex-col sm:text-base text-sm sm:items-end justify-center gap-1">
                   <Link
-                    href="#"
+                    href="https://widget.thefork.com/7b428609-237e-4a67-ab1b-63da08e84119"
+                    target="_blank"
                     className="hover:text-primary/80 transition-colors text-primary"
                   >
                     Book Now
