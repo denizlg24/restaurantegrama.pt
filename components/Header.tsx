@@ -56,7 +56,10 @@ const Header = () => {
           <Link href="#" className="hover:text-white/80 transition-colors">
             GALERIA
           </Link>
-          <Link href="#" className="hover:text-white/80 transition-colors">
+          <Link
+            href="#contacts"
+            className="hover:text-white/80 transition-colors"
+          >
             CONTACTOS
           </Link>
         </div>
@@ -108,32 +111,11 @@ const Header = () => {
               <Divider className="w-full h-[1px] bg-primary" />
               <Link
                 className="text-4xl font-capt w-full text-primary hover:opacity-80 transition-opacity"
-                href="#"
+                href="#contacts"
               >
                 CONTACTO
               </Link>
               <Divider className="w-full h-[1px] bg-primary" />
-              <div className="sm:flex-row sm:gap-0 gap-3 flex flex-col w-full justify-between items-center">
-                <div className="flex sm:text-base text-sm sm:flex-col flex-row sm:items-start justify-center gap-1">
-                  <p className="font-glacial text-primary">
-                    Rua João das Regras, 45
-                  </p>
-                  <p className="font-glacial text-primary">Piso -2, Porto</p>
-                </div>
-                <Divider className="w-full h-[1px] bg-primary sm:hidden" />
-                <div className="flex flex-col sm:text-base text-sm sm:items-end justify-center gap-1">
-                  <Link
-                    href="https://widget.thefork.com/7b428609-237e-4a67-ab1b-63da08e84119"
-                    target="_blank"
-                    className="hover:text-primary/80 transition-colors text-primary"
-                  >
-                    Book Now
-                  </Link>
-                  <p className="font-glacial text-primary">
-                    restaurantegrama@gmail.com
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </NavbarMenuItem>
