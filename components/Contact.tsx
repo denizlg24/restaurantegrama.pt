@@ -7,25 +7,25 @@ const Contact = () => {
       id="contacts"
       className="w-full px-4 py-24 bg-content3 flex flex-col items-center"
     >
-      <div className="w-full max-w-screen-xl grid grid-cols-2 bg-white rounded-xl shadow-2xl">
-        <div className="flex w-full col-span-1 flex-col items-center p-16">
-          <h1 className="w-full font-amsterdam text-7xl text-primary text-center mb-24 mt-4">
+      <div className="w-full max-w-screen-xl xl:grid grid-cols-2 flex flex-col bg-white rounded-xl shadow-2xl">
+        <div className="flex w-full col-span-1 flex-col items-center sm:px-16 px-8 py-16">
+          <h1 className="w-full font-amsterdam md:text-7xl text-5xl text-primary text-center mb-24 mt-4">
             Contacts
           </h1>
-          <div className="grid grid-cols-10 gap-4 w-full items-center mb-6">
-            <IoMdMail className="col-span-1 w-full h-auto aspect-square text-primary" />
-            <p className="font-glacial text-3xl text-primary">
+          <div className="flex flex-row justify-start gap-4 w-full items-center mb-6">
+            <IoMdMail className="w-8 min-w-8 h-8 aspect-square text-primary" />
+            <p className="font-glacial sm:text-3xl text-base text-primary w-full break-words">
               restaurantegrama@gmail.com
             </p>
           </div>
-          <div className="grid grid-cols-10 gap-4 w-full items-center">
-            <IoLocationOutline className="col-span-1 w-full h-auto aspect-square text-primary" />
-            <p className="font-glacial text-3xl text-primary w-max">
+          <div className="flex flex-row justify-start gap-4 w-full items-center">
+            <IoLocationOutline className="w-8 min-w-8 h-8 aspect-square text-primary" />
+            <p className="font-glacial sm:text-3xl text-base text-primary w-full break-words">
               Rua João das Regras, 45, Piso -2
             </p>
           </div>
         </div>
-        <div className="flex w-full col-span-1 flex-col items-center bg-primary p-16 rounded-xl gap-8">
+        <div className="flex w-full col-span-1 flex-col items-center bg-primary sm:px-16 px-8 py-16 rounded-xl gap-8">
           <div className="w-full flex flex-col items-center relative">
             <input
               type="email"
