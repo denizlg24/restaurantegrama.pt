@@ -10,11 +10,24 @@ import {
   NavbarMenuItem,
   NavbarMenuToggle,
 } from "@nextui-org/react";
+import { useParams, usePathname } from "next/navigation";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Header = () => {
   const [isMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const params = useParams();
+  const locationDict: { [id: string]: number } = {
+    "/menus": 0,
+    "/#contacts": 1,
+  };
+  const [hash, setHash] = useState("");
+
+  useEffect(() => {
+    console.log("Hash changed:", window.location.hash);
+    setHash(window.location.hash);
+  }, [params]);
   return (
     <Navbar
       maxWidth="2xl"
@@ -31,7 +44,7 @@ const Header = () => {
             alt="logo_grama"
             width={300}
             height={300}
-            className="!w-12 !h-12"
+            className="!w-12 !h-12 !opacity-100"
           />
         </a>
       </NavbarBrand>
@@ -39,15 +52,27 @@ const Header = () => {
         className="hidden lg:flex flex-col gap-2 h-max py-1"
         justify="center"
       >
-        <Image
-          src="/grama_logo.png"
-          alt="logo_grama"
-          width={300}
-          height={300}
-          className="w-12 !h-12"
-        />
+        <a href="/">
+          <Image
+            src="/grama_logo.png"
+            alt="logo_grama"
+            width={300}
+            height={300}
+            className="w-12 !h-12 !opacity-100"
+          />
+        </a>
         <div className="flex flex-row items-center gap-8 text-white font-capt text-4xl">
-          <Link href="#" className="hover:text-white/80 transition-colors">
+          <Link
+            href="menus"
+            className={
+              "hover:text-white/80 transition-colors border-white " +
+              `${
+                locationDict[pathname + hash] == 0
+                  ? "border-b-2"
+                  : "border-none"
+              }`
+            }
+          >
             MENUS
           </Link>
           <Link href="#" className="hover:text-white/80 transition-colors">
@@ -57,8 +82,15 @@ const Header = () => {
             GALERIA
           </Link>
           <Link
-            href="#contacts"
-            className="hover:text-white/80 transition-colors"
+            href="/#contacts"
+            className={
+              "hover:text-white/80 transition-colors border-white " +
+              `${
+                locationDict[pathname + hash] == 1
+                  ? "border-b-2"
+                  : "border-none"
+              }`
+            }
           >
             CONTACTOS
           </Link>
@@ -90,7 +122,7 @@ const Header = () => {
             <div className="w-full flex flex-col gap-8 items-center text-center">
               <Link
                 className="text-4xl font-capt w-full text-primary hover:opacity-80 transition-opacity"
-                href="#"
+                href="menus"
               >
                 MENUS
               </Link>
@@ -111,7 +143,7 @@ const Header = () => {
               <Divider className="w-full h-[1px] bg-primary" />
               <Link
                 className="text-4xl font-capt w-full text-primary hover:opacity-80 transition-opacity"
-                href="#contacts"
+                href="/#contacts"
               >
                 CONTACTO
               </Link>
