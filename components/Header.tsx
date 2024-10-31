@@ -44,7 +44,7 @@ const Header = () => {
             alt="logo_grama"
             width={300}
             height={300}
-            className="!w-12 !h-12 !opacity-100"
+            className="!w-12 !h-12"
           />
         </a>
       </NavbarBrand>
@@ -58,7 +58,7 @@ const Header = () => {
             alt="logo_grama"
             width={300}
             height={300}
-            className="w-12 !h-12 !opacity-100"
+            className="w-12 !h-12"
           />
         </a>
         <div className="flex flex-row items-center gap-8 text-white font-capt text-4xl">
