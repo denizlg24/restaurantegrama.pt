@@ -3,7 +3,10 @@ import { Image } from "@nextui-org/react";
 
 const About = () => {
   return (
-    <div className="w-full px-4 py-24 bg-primary flex flex-col items-center">
+    <div
+      id="sobre"
+      className="w-full px-4 py-24 bg-primary flex flex-col items-center"
+    >
       <div className="w-full max-w-screen-xl flex lg:flex-row flex-col-reverse items-center justify-between lg:gap-24 gap-12">
         <div className="flex-1 w-full flex flex-col items-center relative p-0">
           <Image

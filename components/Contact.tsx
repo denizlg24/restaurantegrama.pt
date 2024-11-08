@@ -1,6 +1,6 @@
 "use client";
 import { IoMdMail } from "react-icons/io";
-import { IoLocationOutline } from "react-icons/io5";
+import { IoLocationOutline, IoLogoInstagram } from "react-icons/io5";
 const Contact = () => {
   return (
     <div
@@ -18,12 +18,22 @@ const Contact = () => {
               restaurantegrama@gmail.com
             </p>
           </div>
-          <div className="flex flex-row justify-start gap-4 w-full items-center">
+          <div className="flex flex-row justify-start gap-4 w-full items-center mb-6">
             <IoLocationOutline className="w-8 min-w-8 h-8 aspect-square text-primary" />
             <p className="font-glacial sm:text-3xl text-base text-primary w-full break-words">
               Rua João das Regras, 45, Piso -2
             </p>
           </div>
+          <a
+            href="https://instagram.com/grama.restaurante"
+            target="_blank"
+            className="flex flex-row justify-start gap-4 w-full items-center"
+          >
+            <IoLogoInstagram className="w-8 min-w-8 h-8 aspect-square text-primary" />
+            <p className="font-glacial sm:text-3xl text-base text-primary w-full break-words">
+              grama.restaurante
+            </p>
+          </a>
         </div>
         <div className="flex w-full col-span-1 flex-col items-center bg-primary sm:px-16 px-8 py-16 rounded-xl gap-8">
           <div className="w-full flex flex-col items-center relative">

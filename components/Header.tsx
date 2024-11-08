@@ -19,8 +19,10 @@ const Header = () => {
   const pathname = usePathname();
   const params = useParams();
   const locationDict: { [id: string]: number } = {
-    "/menus": 0,
+    "/#menus": 0,
     "/#contacts": 1,
+    "/#galeria": 2,
+    "/#sobre": 3,
   };
   const [hash, setHash] = useState("");
 
@@ -63,7 +65,7 @@ const Header = () => {
         </a>
         <div className="flex flex-row items-center gap-8 text-white font-capt text-4xl">
           <Link
-            href="menus"
+            href="#menus"
             className={
               "hover:text-white/80 transition-colors border-white " +
               `${
@@ -75,10 +77,30 @@ const Header = () => {
           >
             MENUS
           </Link>
-          <Link href="#" className="hover:text-white/80 transition-colors">
-            RESERVA
+          <Link
+            href="/#sobre"
+            className={
+              "hover:text-white/80 transition-colors border-white " +
+              `${
+                locationDict[pathname + hash] == 3
+                  ? "border-b-2"
+                  : "border-none"
+              }`
+            }
+          >
+            SOBRE NÓS
           </Link>
-          <Link href="#" className="hover:text-white/80 transition-colors">
+          <Link
+            href="/#galeria"
+            className={
+              "hover:text-white/80 transition-colors border-white " +
+              `${
+                locationDict[pathname + hash] == 2
+                  ? "border-b-2"
+                  : "border-none"
+              }`
+            }
+          >
             GALERIA
           </Link>
           <Link
@@ -122,21 +144,21 @@ const Header = () => {
             <div className="w-full flex flex-col gap-8 items-center text-center">
               <Link
                 className="text-4xl font-capt w-full text-primary hover:opacity-80 transition-opacity"
-                href="menus"
+                href="#menus"
               >
                 MENUS
               </Link>
               <Divider className="w-full h-[1px] bg-primary" />
               <Link
                 className="text-4xl font-capt w-full text-primary hover:opacity-80 transition-opacity"
-                href="#"
+                href="/#sobre"
               >
-                RESERVA
+                SOBRE NÓS
               </Link>
               <Divider className="w-full h-[1px] bg-primary" />
               <Link
                 className="text-4xl font-capt w-full text-primary hover:opacity-80 transition-opacity"
-                href="#"
+                href="/#galeria"
               >
                 GALERIA
               </Link>

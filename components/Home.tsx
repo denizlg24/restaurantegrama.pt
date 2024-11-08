@@ -6,9 +6,13 @@ const Home = () => {
       <div className="absolute flex flex-col items-center justify-center z-10 md:scale-100 sm:scale-85 scale-[0.5]">
         <h2 className="font-capt text-7xl text-white font-bold">WELCOME TO</h2>
         <h1 className="font-amsterdam text-[10rem] -mt-28 text-white">Grama</h1>
-        <button className="font-capt text-white sm:text-6xl text-5xl sm:ml-40 mt-2 ml-32 border-[4px] border-white rounded-lg p-2 px-4 hover:opacity-80 hover:scale-95 transition-all">
-          BOOK A TABLE
-        </button>
+        <a
+          href="https://widget.thefork.com/7b428609-237e-4a67-ab1b-63da08e84119"
+          target="_blank"
+          className="font-capt text-white sm:text-5xl text-4xl sm:ml-40 mt-2 ml-32 border-[4px] border-white rounded-lg p-2 px-4 hover:opacity-80 hover:scale-95 transition-all"
+        >
+          RESERVA A TUA MESA
+        </a>
       </div>
 
       <Image
