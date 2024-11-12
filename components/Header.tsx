@@ -123,7 +123,7 @@ const Header = () => {
         className="lg:flex flex-col gap-1 justify-center items-end text-xl hidden"
       >
         <Link
-          href="https://widget.thefork.com/7b428609-237e-4a67-ab1b-63da08e84119"
+          href="https://reservation.dish.co/widget/hydra-3f9a1251-b309-4000-b131-85c2000a8327"
           target="_blank"
           className="hover:text-white/80 transition-colors text-white"
         >
