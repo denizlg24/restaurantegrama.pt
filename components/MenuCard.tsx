@@ -28,10 +28,18 @@ const MenuCard = ({
       </CardBody>
       <CardFooter className="w-full flex flex-col items-center justify-center">
         <Link
-          className="text-secondary hover:text-primary transition-colors text-5xl text-center font-capt"
-          href={href}
+          className="text-primary hover:text-black transition-colors text-5xl text-center font-capt"
+          href={`${href}-pt.pdf`}
+          target="_blank"
         >
           {text}
+        </Link>
+        <Link
+          className="text-primary hover:text-black transition-colors text-2xl text-center font-capt"
+          href={`${href}-en.pdf`}
+          target="_blank"
+        >
+          English Version
         </Link>
       </CardFooter>
     </Card>
