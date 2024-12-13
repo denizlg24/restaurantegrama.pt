@@ -1,6 +1,7 @@
 "use client";
 import { IoMdMail } from "react-icons/io";
 import { IoLocationOutline, IoLogoInstagram } from "react-icons/io5";
+import { IoIosPhonePortrait } from "react-icons/io";
 import { useState } from "react";
 import sendEmail from "@/app/actions/sendEmail";
 const Contact = () => {
@@ -24,6 +25,12 @@ const Contact = () => {
             <IoMdMail className="w-8 min-w-8 h-8 aspect-square text-primary" />
             <p className="font-glacial sm:text-3xl text-base text-primary w-full break-words">
               restaurantegrama@gmail.com
+            </p>
+          </div>
+          <div className="flex flex-row justify-start gap-4 w-full items-center mb-6">
+            <IoIosPhonePortrait className="w-8 min-w-8 h-8 aspect-square text-primary" />
+            <p className="font-glacial sm:text-3xl text-base text-primary w-full break-words">
+              +351 937 460 684
             </p>
           </div>
           <div className="flex flex-row justify-start gap-4 w-full items-center mb-6">
