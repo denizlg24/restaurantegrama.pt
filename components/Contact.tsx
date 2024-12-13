@@ -1,7 +1,15 @@
 "use client";
 import { IoMdMail } from "react-icons/io";
 import { IoLocationOutline, IoLogoInstagram } from "react-icons/io5";
+import { useState } from "react";
+import sendEmail from "@/app/actions/sendEmail";
 const Contact = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [userInput, setUserInput] = useState({
+    email: "",
+    subject: "",
+    body: "",
+  });
   return (
     <div
       id="contacts"
@@ -40,6 +48,12 @@ const Contact = () => {
             <input
               type="email"
               id="email"
+              value={userInput.email}
+              onChange={(e) => {
+                setUserInput((prev) => {
+                  return { ...prev, email: e.target.value };
+                });
+              }}
               placeholder="Teu email"
               className="w-full bg-white text-primary p-4 rounded-lg z-20 focus:outline-none font-glacial text-xl"
             />
@@ -50,6 +64,12 @@ const Contact = () => {
               type="text"
               id="title"
               placeholder="Título"
+              value={userInput.subject}
+              onChange={(e) => {
+                setUserInput((prev) => {
+                  return { ...prev, subject: e.target.value };
+                });
+              }}
               className="w-full bg-white text-primary p-4 rounded-lg z-20 focus:outline-none font-glacial text-xl"
             />
             <div className="w-full h-full absolute bg-transparent -bottom-2 border-4 rounded-lg border-secondary translate-x-2"></div>
@@ -58,13 +78,28 @@ const Contact = () => {
             <textarea
               id="msg"
               placeholder="Como podemos ajudar?"
+              value={userInput.body}
+              onChange={(e) => {
+                setUserInput((prev) => {
+                  return { ...prev, body: e.target.value };
+                });
+              }}
               className="w-full bg-white text-primary p-4 rounded-lg z-20 h-[300px] resize-none focus:outline-none font-glacial text-xl"
             />
             <div className="w-full h-full absolute bg-transparent -bottom-2 border-4 rounded-lg border-secondary translate-x-2"></div>
           </div>
           <div className="w-full flex flex-col items-center relative pointer-events-none  group">
-            <button className="w-full bg-content3 rounded-lg p-4 text-black font-glacial text-2xl group relative z-20 pointer-events-auto">
-              Enviar
+            <button
+              onClick={async () => {
+                setIsLoading(true);
+                await sendEmail(userInput);
+                setUserInput({ email: "", body: "", subject: "" });
+                setIsLoading(false);
+              }}
+              disabled={isLoading}
+              className="w-full bg-content3 rounded-lg p-4 text-black font-glacial text-2xl group relative z-20 pointer-events-auto"
+            >
+              {isLoading ? "Enviando..." : "Enviar"}
             </button>
             <div className="w-full h-full absolute bg-transparent -bottom-2 border-4 rounded-lg border-secondary translate-x-2 group-hover:opacity-100 opacity-0 transition-opacity"></div>
           </div>
