@@ -36,7 +36,7 @@ const Contact = () => {
           <div className="flex flex-row justify-start gap-4 w-full items-center mb-6">
             <IoLocationOutline className="w-8 min-w-8 h-8 aspect-square text-primary" />
             <p className="font-glacial sm:text-3xl text-base text-primary w-full break-words">
-              Rua João das Regras, 45, Piso -2
+              Rua Régulo Magauanha 127, 4200-290 Porto
             </p>
           </div>
           <a
